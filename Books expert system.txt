@@ -1,0 +1,1067 @@
+start:-
+writeln("------------------ Welcome to The Book Recommendation System ------------------"),
+writeln("------------------ “There is no friend as loyal as a book.” ------------------"),nl, menu.
+%----------------------------------------------------------------------------------------------------------------
+menu:-
+writeln('What type of genre do you prefer?'),
+writeln('1. Crime.'),
+writeln('2. Science Fiction.'),
+read(X),
+(not(X==1),not(X==2) ->
+writeln("Invalid input, try again!"), menu;
+case(X)).
+%------------------------------------------------------------Cases---------------------------------------------
+
+case(1):-
+   
+ writeln("What is the average number of pages that you usually read?"),
+ writeln('1. Less than 500 pages'),
+ writeln('2. About 500 pages or more.'),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),case(1);
+ ((X=='yes') ->
+ publishDate1;
+ publishDate2)
+ ).
+%---------------------case 1 More than 500 pages----------------------------
+/*Books less than 500 pages*/
+publishDate1:-
+ writeln("From which decade do you prefer the book's publish date? "),
+ writeln('1. Before 2010'),
+ writeln('2. After 2010'),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),publishDate1;
+ ((X==1) ->
+ bookType1;bookType2)
+ ).
+bookType1:-
+ writeln("How do you prefer to read the book?"),
+ writeln("1. E-Book"),
+ writeln("2. Audiobook"),
+ writeln("3. Physical Book"),
+ read(X),
+ (not(X==1), not(X==2), not(X==3) ->
+ writeln("Invalid input, try again!"),bookType1; ((X==1) -> hasMovie1;(X==2) ->
+ hasMovie2; hasMovie3)
+ ).
+bookType2:-
+ writeln("How do you prefer to read the book?"),
+ writeln("1. E-Book"),
+ writeln("2. Audiobook"),
+ writeln("3. Physical Book"),
+ read(X),
+ (not(X==1), not(X==2), not(X==3) ->
+ writeln("Invalid input, try again!"),bookType2; ((X==1) -> hasMovie4;(X==2) ->
+ hasMovie5; hasMovie6)
+ ).
+hasMovie1:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie1;
+ ((X==1) ->
+ hasSeries1; hasSeries2
+ )).
+hasMovie2:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie2;
+ ((X==1) ->
+ hasSeries3; hasSeries4
+ )).
+hasMovie3:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie3;
+ ((X==1) ->
+ hasSeries5; hasSeries6
+ )).
+hasMovie4:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie4;
+ ((X==1) ->
+ hasSeries7; hasSeries8
+ )).
+hasMovie5:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie5;
+ ((X==1) ->
+ hasSeries9; hasSeries10
+ )).
+hasMovie6:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie6;
+ ((X==1) ->
+ hasSeries11; hasSeries12
+ )).
+hasSeries1:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries1;
+ ((X==1) ->
+ writeln("Beat the Reaper"); writeln("Murder on the Orient Express")
+ )).
+hasSeries2:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries2;
+ ((X==1) ->
+ writeln("The Ruins of Gorlan"); writeln("The Mystic Arts of Erasing All Signs of Deth")
+ )).
+hasSeries3:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries3;
+ ((X==1) ->
+ writeln("Jurassic Park"); hours1
+ )).
+hasSeries4:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries4;
+ ((X==1) ->
+ writeln("The Coroner's Lunch"); hours2
+ )).
+hasSeries5:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries5;
+ ((X==1) ->
+ writeln("Return of Shelock Holmes"); writeln("The Sign of Four")
+ )).
+hasSeries6:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries6;
+ ((X==1) ->
+ writeln("Robert B Parker"); writeln("Encyclopedia Brown Solves Them All")
+ )).
+hasSeries7:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries7;
+ ((X==1) ->
+ writeln("The Cuckoo's Calling"); writeln("Gone Girl ")
+ )).
+hasSeries8:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries8;
+ ((X==1) ->
+ writeln("Think Of a Number "); writeln("The Mystic Arts of Erasing All Signs of Death")
+ )).
+hasSeries9:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries9;
+ ((X==1) ->
+ writeln("The Girl On the Train"); hours3
+ )).
+hasSeries10:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries10;
+ ((X==1) ->
+ writeln("The Beast Side :Living And Dying While Black in America "); hours4
+ )).
+hasSeries11:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries11;
+ ((X==1) ->
+ writeln("And There There Were None"); writeln("I'm Thinking Of Ending Things")
+ )).
+hasSeries12:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries12;
+ ((X==1) ->
+ writeln("Split Second"); writeln("Born a Crime : stories from a south african childhood")
+ )).
+hours1:-
+ writeln("How many hours?"),
+ writeln("1. Less than 9 hours "),
+ writeln("2. More than 9 hours"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hours1;
+ ((X==1) ->
+ writeln("The Big Sleep by Raymond Chandler"); writeln("White Heat")
+ )).
+hours2:-
+ writeln("How many hours?"),
+ writeln("1. Less than 9 hours "),
+ writeln("2. More than 9 hours"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hours2;
+ ((X==1) ->
+ writeln("The Unicorn Murders Novel"); writeln("Waking Nightmare")
+ )).
+hours3:-
+ writeln("How many hours?"),
+ writeln("1. Less than 9 hours "),
+ writeln("2. More than 9 hours"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hours3;
+ ((X==1) ->
+ writeln("Lost Girls , an Unsolved American Mystery"); writeln("Jeffery Dahmer : a Terrefing
+True Story of Rape, Murder and Cannibilism ")
+ )).
+hours4:-
+ writeln("How many hours?"),
+ writeln("1. Less than 9 hours "),
+ writeln("2. More than 9 hours"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hours4;
+ ((X==1) ->
+ writeln("Alex, Cross, Run "); writeln("Death Angel ")
+ )).
+/*Books more than 500 pages*/
+publishDate2:-
+ writeln("From which decade do you prefer the book's publish date? "),
+ writeln('1. Before 2010'),
+ writeln('2. After 2010'),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),publishDate2;
+ ((X==1) ->
+ bookType2;bookType3)
+ ).
+/*Before 2010*/
+bookType3:-
+ writeln("How do you prefer to read the book?"),
+ writeln("1. E-Book"),
+ writeln("2. Audiobook"),
+ writeln("3. Physical Book"),
+ read(X),
+ (not(X==1), not(X==2), not(X==3) ->
+ writeln("Invalid input, try again!"),bookType3; ((X==1) -> hasMovie7;(X==2) ->
+ hasMovie8; hasMovie9)
+ ).
+hasMovie7:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie7;
+ ((X==1) ->
+ hasSeries13; hasSeries14
+ )).
+hasMovie8:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie8;
+ ((X==1) ->
+ hasSeries15; hasSeries16
+ )).
+hasMovie9:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie9;
+ ((X==1) ->
+ hasSeries17; hasSeries18
+ )).
+hasSeries13:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries13;
+ ((X==1) ->
+ writeln("Kiss the Girls"); writeln("Murder on the Orient Express")
+ )).
+hasSeries14:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries14;
+ ((X==1) ->
+ writeln("Mystic River"); writeln("Desert Star")
+ )).
+hasSeries15:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries15;
+ ((X==1) ->
+ writeln("The Girl with the Dragon Tatoo"); hours5
+ )).
+hasSeries16:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries16;
+ ((X==1) ->
+ writeln("The Coroner's Lunch"); hours6
+ )).
+hasSeries17:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries17;
+ ((X==1) ->
+ writeln("A Time to Kill"); writeln("The Sign of Four")
+ )).
+hasSeries18:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries18;
+ ((X==1) ->
+ writeln("Sherlock Holmes: The Complete Novles and Storied Volume I"); writeln("With No
+one as Witness")
+ )).
+hours5:-
+ writeln("How many hours?"),
+ writeln("1. Less than 9 hours "),
+ writeln("2. More than 9 hours"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hours5;
+ ((X==1) ->
+ writeln("Crime and Punishment"); writeln("The Da Vinci Code")
+ )).
+hours6:-
+ writeln("How many hours?"),
+ writeln("1. Less than 9 hours "),
+ writeln("2. More than 9 hours"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hours6;
+ ((X==1) ->
+ writeln("The Devil Knows You're Dead"); writeln("The Science of the Lambs")
+ )).
+/*After 2010*/
+bookType4:-
+ writeln("How do you prefer to read the book?"),
+ writeln("1. E-Book"),
+ writeln("2. Audiobook"),
+ writeln("3. Physical Book"),
+ read(X),
+ (not(X==1), not(X==2), not(X==3) ->
+ writeln("Invalid input, try again!"),bookType4; ((X==1) -> hasMovie10;(X==2) ->
+ hasMovie11; hasMovie12)
+ ).
+hasMovie10:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie10;
+ ((X==1) ->
+ hasSeries19; hasSeries20
+ )).
+hasMovie11:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie11;
+ ((X==1) ->
+ hasSeries21; hasSeries22
+ )).
+hasMovie12:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie12;
+ ((X==1) ->
+ hasSeries23; hasSeries24
+ )).
+hasSeries19:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries19;
+ ((X==1) ->
+ writeln("Career of Evil"); writeln("The North Ligh")
+ )).
+hasSeries20:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries20;
+ ((X==1) ->
+ writeln("Lethal White"); writeln("The North Ligh")
+ )).
+hasSeries21:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries21;
+ ((X==1) ->
+ writeln("Hell Bent"); hours7
+ )).
+hasSeries22:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries22;
+ ((X==1) ->
+ writeln("Sons of Valor III: War Machine"); hours8
+ )).
+hasSeries23:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries23;
+ ((X==1) ->
+ writeln("Troubled Blood or The North Light"); writeln("The Cartel")
+ )).
+hasSeries24:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries24;
+ ((X==1) ->
+ writeln("The Adventures of Sherlock Holmes and Other Stories"); writeln("The Black
+Angel ")
+ )).
+hours7:-
+ writeln("How many hours?"),
+ writeln("1. Less than 9 hours "),
+ writeln("2. More than 9 hours"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hours7;
+ ((X==1) ->
+ writeln("American Predator"); writeln("Mortal Danger")
+ )).
+hours8:-
+ writeln("How many hours?"),
+ writeln("1. Less than 9 hours "),
+ writeln("2. More than 9 hours"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hours8;
+ ((X==1) ->
+ writeln("The Brilliant Death"); writeln("The Kill Artist")
+ )).
+
+%----------------------------------case 2 question -----------------------
+
+
+
+case(2):-
+ writeln("What is the average number of pages that you usually read?"),
+ writeln('1. Less than 500 pages'),
+ writeln('2. About 500 pages or more.'),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),case(1);
+ ((X=='yes') ->
+ publishDate3;
+ publishDate4)
+ ).
+%---------------------case 1 More than 500 pages----------------------------
+/*Books less than 500 pages*/
+publishDate3:-
+ writeln("From which decade do you prefer the book's publish date? "),
+ writeln('1. Before 2010'),
+ writeln('2. After 2010'),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),publishDate3;
+ ((X==1) ->
+ bookType5;bookType6)
+ ).
+bookType5:-
+ writeln("How do you prefer to read the book?"),
+ writeln("1. E-Book"),
+ writeln("2. Audiobook"),
+ writeln("3. Physical Book"),
+ read(X),
+ (not(X==1), not(X==2), not(X==3) ->
+ writeln("Invalid input, try again!"),bookType5; ((X==1) -> hasMovie13;(X==2) ->
+ hasMovie14; hasMovie15)
+ ).
+bookType6:-
+ writeln("How do you prefer to read the book?"),
+ writeln("1. E-Book"),
+ writeln("2. Audiobook"),
+ writeln("3. Physical Book"),
+ read(X),
+ (not(X==1), not(X==2), not(X==3) ->
+ writeln("Invalid input, try again!"),bookType6; ((X==1) -> hasMovie16;(X==2) ->
+ hasMovie17; hasMovie18)
+ ).
+hasMovie13:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie13;
+ ((X==1) ->
+ hasSeries25; hasSeries26
+ )).
+hasMovie14:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie14;
+ ((X==1) ->
+ hasSeries27; hasSeries28
+ )).
+hasMovie15:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie15;
+ ((X==1) ->
+ hasSeries29; hasSeries30
+ )).
+hasMovie16:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie16;
+ ((X==1) ->
+ hasSeries31; hasSeries32
+ )).
+hasMovie17:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie17;
+ ((X==1) ->
+ hasSeries33; hasSeries34
+ )).
+hasMovie18:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie18;
+ ((X==1) ->
+ hasSeries35; hasSeries36
+ )).
+hasSeries25:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries25;
+ ((X==1) ->
+ writeln("The Twilight Saga"); writeln("The Hitchhiker's Guide to the galaxy ")
+ )).
+hasSeries26:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries26;
+ ((X==1) ->
+ writeln("RingWord"); writeln("The Norton Book of science Fiction")
+ )).
+hasSeries27:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries27;
+ ((X==1) ->
+ writeln("The Chronicles of Narnia "); hours9
+ )).
+hasSeries28:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries28;
+ ((X==1) ->
+ writeln("A Clash of kings"); hours10
+ )).
+hasSeries29:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries29;
+ ((X==1) ->
+ writeln("The Hobbit"); writeln("The Day the Erth Stood Still")
+ )).
+hasSeries30:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries30;
+ ((X==1) ->
+ writeln("The dark Tower"); writeln("She Who Waits")
+ )).
+hasSeries31:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries31;
+ ((X==1) ->
+ writeln("Monkingiay"); writeln("Reasy play one")
+ )).
+hasSeries32:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries32;
+ ((X==1) ->
+ writeln("The illuminae files"); writeln("Tthe quantum thief")
+ )).
+hasSeries33:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries33;
+ ((X==1) ->
+ writeln("Divergent"); hours11
+ )).
+hasSeries34:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries34;
+ ((X==1) ->
+ writeln("Red Queen"); hours12
+ )).
+hasSeries35:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries35;
+ ((X==1) ->
+ writeln("The maze runner"); writeln("Ancillary justice")
+ )).
+hasSeries36:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries36;
+ ((X==1) ->
+ writeln("Ancillary justice 2"); writeln("Pines")
+ )).
+hours9:-
+ writeln("How many hours?"),
+ writeln("1. Less than 9 hours "),
+ writeln("2. More than 9 hours"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hours9;
+ ((X==1) ->
+ writeln("Frankestenin"); writeln("The Bourne identity")
+ )).
+hours10:-
+ writeln("How many hours?"),
+ writeln("1. Less than 9 hours "),
+ writeln("2. More than 9 hours"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hours10;
+ ((X==1) ->
+ writeln("The Catcher in the Rye"); writeln("The Left Hand Of Darkness")
+ )).
+hours11:-
+ writeln("How many hours?"),
+ writeln("1. Less than 9 hours "),
+ writeln("2. More than 9 hours"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hours11;
+ ((X==1) ->
+ writeln("Old man war"); writeln("The three-body problem")
+ )).
+hours12:-
+ writeln("How many hours?"),
+ writeln("1. Less than 9 hours "),
+ writeln("2. More than 9 hours"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hours12;
+ ((X==1) ->
+ writeln("Rule 34"); writeln("The giver")
+ )).
+
+
+/*Books more than 500 pages*/
+publishDate4:-
+ writeln("From which decade do you prefer the book's publish date? "),
+ writeln('1. Before 2010'),
+ writeln('2. After 2010'),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),publishDate4;
+ ((X==1) ->
+ bookType7;bookType8)
+ ).
+/*Before 2010*/
+bookType7:-
+ writeln("How do you prefer to read the book?"),
+ writeln("1. E-Book"),
+ writeln("2. Audiobook"),
+ writeln("3. Physical Book"),
+ read(X),
+ (not(X==1), not(X==2), not(X==3) ->
+ writeln("Invalid input, try again!"),bookType7; ((X==1) -> hasMovie19;(X==2) ->
+ hasMovie20; hasMovie21)
+ ).
+hasMovie19:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie19;
+ ((X==1) ->
+ hasSeries37; hasSeries38
+ )).
+hasMovie20:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie20;
+ ((X==1) ->
+ hasSeries39; hasSeries40
+ )).
+hasMovie21:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie21;
+ ((X==1) ->
+ hasSeries41; hasSeries42
+ )).
+hasSeries37:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries37;
+ ((X==1) ->
+ writeln("Harry Potter"); writeln("BATTLE ROYALE")
+ )).
+hasSeries38:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries38;
+ ((X==1) ->
+ writeln("Hyperion"); writeln("2666")
+ )).
+hasSeries39:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries39;
+ ((X==1) ->
+ writeln("The lord of the rings"); hours13
+ )).
+hasSeries40:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries40;
+ ((X==1) ->
+ writeln("The Valley of Horses"); hours14
+ )).
+hasSeries41:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries41;
+ ((X==1) ->
+ writeln("Dune"); writeln("The Blind Assassin ")
+ )).
+hasSeries42:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries42;
+ ((X==1) ->
+ writeln("A Song of Ice and Fire"); writeln("American Gods")
+ )).
+hours13:-
+ writeln("How many hours?"),
+ writeln("1. Less than 9 hours "),
+ writeln("2. More than 9 hours"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hours13;
+ ((X==1) ->
+ writeln("The Mortal Instruments"); writeln("The Goldfintch")
+ )).
+hours14:-
+ writeln("How many hours?"),
+ writeln("1. Less than 9 hours "),
+ writeln("2. More than 9 hours"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hours14;
+ ((X==1) ->
+ writeln("The Amazing Adventures of Kavalier & Clay"); writeln("In the Woods")
+ )).
+
+/*After 2010*/
+bookType8:-
+ writeln("How do you prefer to read the book?"),
+ writeln("1. E-Book"),
+ writeln("2. Audiobook"),
+ writeln("3. Physical Book"),
+ read(X),
+ (not(X==1), not(X==2), not(X==3) ->
+ writeln("Invalid input, try again!"),bookType8; ((X==1) -> hasMovie22;(X==2) ->
+ hasMovie23; hasMovie24)
+ ).
+hasMovie22:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie22;
+ ((X==1) ->
+ hasSeries43; hasSeries44
+ )).
+hasMovie23:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie23;
+ ((X==1) ->
+ hasSeries45; hasSeries46
+ )).
+hasMovie24:-
+ writeln("Has a movie?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasMovie24;
+ ((X==1) ->
+ hasSeries47; hasSeries48
+ )).
+hasSeries43:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries43;
+ ((X==1) ->
+ writeln("The City Of Brass"); writeln("Cutting For Stone")
+ )).
+hasSeries44:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries44;
+ ((X==1) ->
+ writeln("Black Leopard,Red Wolf"); writeln("All The Light We Cannot See")
+ )).
+hasSeries45:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries45;
+ ((X==1) ->
+ writeln("Miss Peregrine's Peculir"); hours15
+ )).
+hasSeries46:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries46;
+ ((X==1) ->
+ writeln("The Grace Of Kings"); hours16
+ )).
+hasSeries47:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries47;
+ ((X==1) ->
+ writeln("A Discovery Of Witches"); writeln("Life After Life")
+ )).
+hasSeries48:-
+ writeln("Has series?"),
+ writeln("1. Yes"),
+ writeln("2. No"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hasSeries48;
+ ((X==1) ->
+ writeln("The Fall Of Hyperion"); writeln("The Big Green Tent ")
+ )).
+hours15:-
+ writeln("How many hours?"),
+ writeln("1. Less than 9 hours "),
+ writeln("2. More than 9 hours"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hours15;
+ ((X==1) ->
+ writeln("The Last Thing He Told Me"); writeln("The Fifth Season")
+ )).
+hours16:-
+ writeln("How many hours?"),
+ writeln("1. Less than 9 hours "),
+ writeln("2. More than 9 hours"),
+ read(X),
+ (not(X==1), not(X==2) ->
+ writeln("Invalid input, try again!"),hours16;
+ ((X==1) ->
+ writeln("Barkskins"); writeln("A Man Called Ove")
+ )).
+
+
+ 
+
+
+
+
+%------------------------------------------------------FINAL QUESTIONS----------------------------------
+%-------------------------------------------------------------------------.
